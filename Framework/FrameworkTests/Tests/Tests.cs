@@ -11,29 +11,29 @@ using TAFramework.Services;
 using TAFramework.Configs;
 using OpenQA.Selenium;
 
-namespace TAFramework.Tests
+namespace FrameworkTests
 {
-    //[TestFixture]
-    //class Tests
-    //{
-    //    private static readonly log4net.ILog log =
-    //        log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+    [TestFixture]
+    class Tests
+    {
+        private static readonly log4net.ILog log =
+            log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-    //    [OneTimeSetUp]
-    //    public void SetUp()
-    //    {
-    //        LoginPageSteps.OpenGmail();
-    //    }
+        [OneTimeSetUp]
+        public void SetUp()
+        {
+            LoginPageSteps.OpenGmail();
+        }
 
-    //    [TearDown]
-    //    public void TearDown()
-    //    {
-    //        LoginPageSteps.SwitchUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-    //        BaseSteps.CleanUserSettingsAndMessages();
-    //        LoginPageSteps.SwitchUser("petra.1212.petrova@gmail.com", "petr0va1212");
-    //        BaseSteps.CleanUserSettingsAndMessages();
-    //        BaseSteps.SignOut();
-    //    }
+        [TearDown]
+        public void TearDown()
+        {
+            LoginPageSteps.SwitchUser("1vana.1104.1vanova@gmail.com", "1van0va1");
+            BaseSteps.CleanUserSettingsAndMessages();
+            LoginPageSteps.SwitchUser("petra.1212.petrova@gmail.com", "petr0va1212");
+            BaseSteps.CleanUserSettingsAndMessages();
+            BaseSteps.SignOut();
+        }
 
         //[Test]
         //public void Test1()
@@ -89,53 +89,53 @@ namespace TAFramework.Tests
         //    BaseSteps.CloseAlert();
         //}
 
-        //[Test]
-        //public void Test4()
-        //{
-        //    try
-        //    {
-        //        LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-        //    BaseSteps.GoToThemes();
-        //    ThemesPageSteps.ChangeBackgroungImage(@"C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg");
-        //    Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured());
-        //    ThemesPageSteps.CloseThemesWindow();
-        //    log.Info("Test 4 - PASS");
-        //    }
-        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-        //    {
-        //        log.Error(ex);
-        //    }
-        //    catch (AssertionException ex)
-        //    {
-        //        log.Error(ex.Message);
-        //        throw;
-        //    }
-        //}
+        [Test]
+        public void Test4()
+        {
+            try
+            {
+                LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
+            BaseSteps.GoToThemes();
+            ThemesPageSteps.ChangeBackgroungImage(@"C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg");
+            Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured());
+            ThemesPageSteps.CloseThemesWindow();
+            log.Info("Test 4 - PASS");
+            }
+            catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+            {
+                log.Error(ex);
+            }
+            catch (AssertionException ex)
+            {
+                log.Error(ex.Message);
+                throw;
+            }
+        }
 
-        //[Test]
-        //public void Test5()
-        //{
-        //    try
-        //    {
-        //        LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-        //        string city = IpApiService.GetCityFromIp(ServiceInfo.IP);
-        //        BaseSteps.SendMessageWithEmoticons("1vana.1104.1vanova@gmail.com", "emoticons", city, 2, 9);
-        //        InboxPageSteps.Refresh();
-        //        InboxPageSteps.GoToMessagePage("1vana.1104.1vanova@gmail.com");
-        //        Assert.AreEqual(1, MessagePageSteps.CountOfEmoticonsInMessage(),"The number of emoticons in the message is incorrect");
-        //        Assert.IsTrue(MessagePageSteps.IsMessageContainsText("ggh"),"The message doesn't contains right city name");//ServiceInfo.City
-        //        log.Info("Test 5 - PASS");
-        //    }
-        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-        //    {
-        //        log.Error(ex);
-        //    }
-        //    catch(AssertionException ex)
-        //    {
-        //        log.Error(ex.Message);
-        //        throw;
-        //    }
-        //}
+        [Test]
+        public void Test5()
+        {
+            try
+            {
+                LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
+                string city = IpApiService.GetCityFromIp(ServiceInfo.IP);
+                BaseSteps.SendMessageWithEmoticons("1vana.1104.1vanova@gmail.com", "emoticons", city, 2, 9);
+                InboxPageSteps.Refresh();
+                InboxPageSteps.GoToMessagePage("1vana.1104.1vanova@gmail.com");
+                Assert.AreEqual(1, MessagePageSteps.CountOfEmoticonsInMessage(),"The number of emoticons in the message is incorrect");
+                Assert.IsTrue(MessagePageSteps.IsMessageContainsText("ggh"),"The message doesn't contains right city name");//ServiceInfo.City
+                log.Info("Test 5 - PASS");
+            }
+            catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+            {
+                log.Error(ex);
+            }
+            catch(AssertionException ex)
+            {
+                log.Error(ex.Message);
+                throw;
+            }
+        }
 
         //// test 6 : don't know how assertion should look like 
         //// test 7 : there's no such option (creating meeting)
@@ -191,5 +191,5 @@ namespace TAFramework.Tests
         //    LoginPageSteps.SwitchUser("1vana.1104.1vanova@gmail.com", "1van0va1");
         //    SettingPageSteps.SetOutOfOfficeAutoReplyOff();
         //}
-    //}
+    }
 }
