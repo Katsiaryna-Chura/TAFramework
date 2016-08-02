@@ -120,19 +120,7 @@
   <data name="City" xml:space="preserve">
     <value>Copenhagen</value>
   </data>
-  <data name="HostName" xml:space="preserve">
-    <value>ip-api.com</value>
-  </data>
-  <data name="HttpMethod" xml:space="preserve">
-    <value>GET</value>
-  </data>
   <data name="IP" xml:space="preserve">
     <value>86.58.245.1</value>
-  </data>
-  <data name="Protocol" xml:space="preserve">
-    <value>http</value>
-  </data>
-  <data name="ResourcePath" xml:space="preserve">
-    <value>json/{ip}</value>
   </data>
 </root>

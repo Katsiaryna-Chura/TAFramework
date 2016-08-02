@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TAFramework.Configs {
+namespace FrameworkTests.Tests {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace TAFramework.Configs {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ServiceInfo {
+    internal class TestsData {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ServiceInfo() {
+        internal TestsData() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TAFramework.Configs {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TAFramework.Configs.ServiceInfo", typeof(ServiceInfo).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FrameworkTests.Tests.TestsData", typeof(TestsData).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,47 +70,11 @@ namespace TAFramework.Configs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ip-api.com.
-        /// </summary>
-        internal static string HostName {
-            get {
-                return ResourceManager.GetString("HostName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to GET.
-        /// </summary>
-        internal static string HttpMethod {
-            get {
-                return ResourceManager.GetString("HttpMethod", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 86.58.245.1.
         /// </summary>
         internal static string IP {
             get {
                 return ResourceManager.GetString("IP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to http.
-        /// </summary>
-        internal static string Protocol {
-            get {
-                return ResourceManager.GetString("Protocol", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to json/{ip}.
-        /// </summary>
-        internal static string ResourcePath {
-            get {
-                return ResourceManager.GetString("ResourcePath", resourceCulture);
             }
         }
     }

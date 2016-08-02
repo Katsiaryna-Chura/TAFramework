@@ -11,7 +11,7 @@ using TAFramework.Services;
 using TAFramework.Configs;
 using OpenQA.Selenium;
 
-namespace FrameworkTests
+namespace FrameworkTests.Tests
 {
     [TestFixture]
     class Tests
@@ -25,15 +25,15 @@ namespace FrameworkTests
             LoginPageSteps.OpenGmail();
         }
 
-        [TearDown]
-        public void TearDown()
-        {
-            LoginPageSteps.SwitchUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-            BaseSteps.CleanUserSettingsAndMessages();
-            LoginPageSteps.SwitchUser("petra.1212.petrova@gmail.com", "petr0va1212");
-            BaseSteps.CleanUserSettingsAndMessages();
-            BaseSteps.SignOut();
-        }
+        //[TearDown]
+        //public void TearDown()
+        //{
+        //    LoginPageSteps.SwitchUser("1vana.1104.1vanova@gmail.com", "1van0va1");
+        //    BaseSteps.CleanUserSettingsAndMessages();
+        //    LoginPageSteps.SwitchUser("petra.1212.petrova@gmail.com", "petr0va1212");
+        //    BaseSteps.CleanUserSettingsAndMessages();
+        //    BaseSteps.SignOut();
+        //}
 
         //[Test]
         //public void Test1()
@@ -89,28 +89,28 @@ namespace FrameworkTests
         //    BaseSteps.CloseAlert();
         //}
 
-        [Test]
-        public void Test4()
-        {
-            try
-            {
-                LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-            BaseSteps.GoToThemes();
-            ThemesPageSteps.ChangeBackgroungImage(@"C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg");
-            Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured());
-            ThemesPageSteps.CloseThemesWindow();
-            log.Info("Test 4 - PASS");
-            }
-            catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-            {
-                log.Error(ex);
-            }
-            catch (AssertionException ex)
-            {
-                log.Error(ex.Message);
-                throw;
-            }
-        }
+        //[Test]
+        //public void Test4()
+        //{
+        //    try
+        //    {
+        //        LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
+        //        BaseSteps.GoToThemes();
+        //        ThemesPageSteps.ChangeBackgroungImage(@"C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg");
+        //        Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured());
+        //        ThemesPageSteps.CloseThemesWindow();
+        //        log.Info("Test 4 - PASS");
+        //    }
+        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+        //    {
+        //        log.Error(ex);
+        //    }
+        //    catch (AssertionException ex)
+        //    {
+        //        log.Error(ex.Message);
+        //        throw;
+        //    }
+        //}
 
         [Test]
         public void Test5()
@@ -118,19 +118,19 @@ namespace FrameworkTests
             try
             {
                 LoginPageSteps.LoginUser("1vana.1104.1vanova@gmail.com", "1van0va1");
-                string city = IpApiService.GetCityFromIp(ServiceInfo.IP);
+                string city = IpApiService.GetCityFromIp(TestsData.IP);
                 BaseSteps.SendMessageWithEmoticons("1vana.1104.1vanova@gmail.com", "emoticons", city, 2, 9);
                 InboxPageSteps.Refresh();
                 InboxPageSteps.GoToMessagePage("1vana.1104.1vanova@gmail.com");
-                Assert.AreEqual(1, MessagePageSteps.CountOfEmoticonsInMessage(),"The number of emoticons in the message is incorrect");
-                Assert.IsTrue(MessagePageSteps.IsMessageContainsText("ggh"),"The message doesn't contains right city name");//ServiceInfo.City
+                Assert.AreEqual(2, MessagePageSteps.CountOfEmoticonsInMessage(), "The number of emoticons in the message is incorrect");
+                Assert.IsTrue(MessagePageSteps.IsMessageContainsText(TestsData.City), "The message doesn't contains right city name");
                 log.Info("Test 5 - PASS");
             }
             catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
             {
                 log.Error(ex);
             }
-            catch(AssertionException ex)
+            catch (AssertionException ex)
             {
                 log.Error(ex.Message);
                 throw;
