@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkCore", "Framework\FrameworkCore.csproj", "{E37829F3-BA95-43BE-B579-D3384EE58241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAFramework", "TAFramework\TAFramework.csproj", "{F12591E8-D7B2-4AAE-A66D-1043019B1BFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E37829F3-BA95-43BE-B579-D3384EE58241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37829F3-BA95-43BE-B579-D3384EE58241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37829F3-BA95-43BE-B579-D3384EE58241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37829F3-BA95-43BE-B579-D3384EE58241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12591E8-D7B2-4AAE-A66D-1043019B1BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12591E8-D7B2-4AAE-A66D-1043019B1BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12591E8-D7B2-4AAE-A66D-1043019B1BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12591E8-D7B2-4AAE-A66D-1043019B1BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
