@@ -16,9 +16,9 @@ namespace TAFramework.Steps
         {
             ThemesPage page = new ThemesPage();
             page.LinkSetTheme.Click(5);
-            Thread.Sleep(3000);
+            page.WaitForPageToLoad();
             page.BtnMyPhotos.Click(5);
-            Thread.Sleep(3000);
+            page.WaitForPageToLoad();
             page.SetFocusToSelectYourBackgroundImage();
             page.BtnUploadPhoto.Click(5);
             page.BtnSelectPhotoFromComputer.Click(9);

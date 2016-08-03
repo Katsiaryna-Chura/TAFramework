@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TAFramework.Pages;
 
@@ -29,6 +30,7 @@ namespace TAFramework.Steps
             }
             page.TxtEmail.TypeText(email, 7);
             page.BtnNext.Click(7);
+            page.WaitForPageToLoad();
             page.TxtPassword.TypeText(password, 7);
             page.BtnSignIn.Click(7);
         }

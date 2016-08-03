@@ -10,22 +10,17 @@ namespace TAFramework.Steps
 {
     public class SpamPageSteps
     {
-        //public static void GoToSpamFolder()
-        //{
-        //    SpamPage page = new SpamPage();
-        //    page.GoToPage();
-        //}
-
         public static bool IsMessagePresentInSpam(string email, string subject)
         {
             SpamPage page = new SpamPage();
-            Thread.Sleep(2000);
+            page.WaitForPageToLoad();
             return page.IsMessageExists(email, subject,7);
         }
 
         public static void MoveMessageToInbox(string email,string subject)
         {
             SpamPage page = new SpamPage();
+            page.WaitForPageToLoad();
             while (page.IsMessageExists(email,subject, 7))
             {
                 page.CbMessageChecker.Select(7);
@@ -37,9 +32,6 @@ namespace TAFramework.Steps
         {
             SpamPage page = new SpamPage();
             page.WaitForPageToLoad();
-            //page.SelectAllMessages();
-            //page.BtnNotSpam.Click(7);
-            //page.WaitForPageToLoad();
             if (page.SelectAllMessages())
             {
                 page.WaitForPageToLoad();

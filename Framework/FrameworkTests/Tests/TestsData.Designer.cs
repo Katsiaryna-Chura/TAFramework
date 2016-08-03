@@ -61,6 +61,33 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to text with attachment.
+        /// </summary>
+        internal static string attach_message {
+            get {
+                return ResourceManager.GetString("attach_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to attach.
+        /// </summary>
+        internal static string attach_subject {
+            get {
+                return ResourceManager.GetString("attach_subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\my_archive.7z.
+        /// </summary>
+        internal static string big_attach_file_path {
+            get {
+                return ResourceManager.GetString("big_attach_file_path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copenhagen.
         /// </summary>
         internal static string City {
@@ -70,11 +97,218 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 2.
+        /// </summary>
+        internal static string emoticon_number_1 {
+            get {
+                return ResourceManager.GetString("emoticon_number_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 9.
+        /// </summary>
+        internal static string emoticon_number_2 {
+            get {
+                return ResourceManager.GetString("emoticon_number_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to emoticons.
+        /// </summary>
+        internal static string emoticon_subject {
+            get {
+                return ResourceManager.GetString("emoticon_subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to forwarding-noreply@google.com.
+        /// </summary>
+        internal static string google_forwarding_email {
+            get {
+                return ResourceManager.GetString("google_forwarding_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 86.58.245.1.
         /// </summary>
         internal static string IP {
             get {
                 return ResourceManager.GetString("IP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        internal static string message {
+            get {
+                return ResourceManager.GetString("message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test123.
+        /// </summary>
+        internal static string message2 {
+            get {
+                return ResourceManager.GetString("message2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to text with no attachment.
+        /// </summary>
+        internal static string no_attach_message {
+            get {
+                return ResourceManager.GetString("no_attach_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to no attach.
+        /// </summary>
+        internal static string no_attach_subject {
+            get {
+                return ResourceManager.GetString("no_attach_subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\text.txt.
+        /// </summary>
+        internal static string normal_attach_file {
+            get {
+                return ResourceManager.GetString("normal_attach_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg.
+        /// </summary>
+        internal static string not_image_file {
+            get {
+                return ResourceManager.GetString("not_image_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PASS.
+        /// </summary>
+        internal static string PASS {
+            get {
+                return ResourceManager.GetString("PASS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re:.
+        /// </summary>
+        internal static string Re {
+            get {
+                return ResourceManager.GetString("Re", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ivana.
+        /// </summary>
+        internal static string signature {
+            get {
+                return ResourceManager.GetString("signature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        internal static string subject {
+            get {
+                return ResourceManager.GetString("subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        internal static string subject2 {
+            get {
+                return ResourceManager.GetString("subject2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1vana.1104.1vanova@gmail.com.
+        /// </summary>
+        internal static string user1_email {
+            get {
+                return ResourceManager.GetString("user1_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1van0va1.
+        /// </summary>
+        internal static string user1_password {
+            get {
+                return ResourceManager.GetString("user1_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to petra.1212.petrova@gmail.com.
+        /// </summary>
+        internal static string user2_email {
+            get {
+                return ResourceManager.GetString("user2_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to petr0va1212.
+        /// </summary>
+        internal static string user2_password {
+            get {
+                return ResourceManager.GetString("user2_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ekaterina.chura@gmail.com.
+        /// </summary>
+        internal static string user3_email {
+            get {
+                return ResourceManager.GetString("user3_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 11495zero.
+        /// </summary>
+        internal static string user3_password {
+            get {
+                return ResourceManager.GetString("user3_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sorry. I&apos;m on vacation now..
+        /// </summary>
+        internal static string vacation_message {
+            get {
+                return ResourceManager.GetString("vacation_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vacation.
+        /// </summary>
+        internal static string vacation_subject {
+            get {
+                return ResourceManager.GetString("vacation_subject", resourceCulture);
             }
         }
     }

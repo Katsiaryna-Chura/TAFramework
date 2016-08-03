@@ -12,14 +12,20 @@ namespace TAFramework.Pages
 {
     public class ForwardPage : BasePage
     {
-        public Button BtnAddForwardingAddress { get; private set; } = new Button(By.XPath("//input[@type='button' and @act='add']"));
-        public TextInput TxtForwardingAddress { get; private set; } = new TextInput(By.XPath("//div[@role='alertdialog']//input[@type='text']"));
-        public Button BtnNext { get; private set; } = new Button(By.XPath("//div[@role='alertdialog']//button[@name='next']"));
-        public Button BtnOk { get; private set; } = new Button(By.XPath("//div[@role='alertdialog']//button[@name='ok']"));
+        public Button BtnAddForwardingAddress { get; private set; } = new Button(By.XPath
+            ("//input[@type='button' and @act='add']"));
+        public TextInput TxtForwardingAddress { get; private set; } = new TextInput(By.XPath
+            ("//div[@role='alertdialog']//input[@type='text']"));
+        public Button BtnNext { get; private set; } = new Button(By.XPath
+            ("//div[@role='alertdialog']//button[@name='next']"));
+        public Button BtnOk { get; private set; } = new Button(By.XPath
+            ("//div[@role='alertdialog']//button[@name='ok']"));
 
         //By.XPath("//button[text()='Save Changes']");
-        public Button BtnSaveChanges { get; private set; } = new Button(By.XPath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[6]/div/table/tbody/tr[4]/td/div/button[1]"));
-        public Radio RbForwardingVariant { get; private set; } = new Radio(By.XPath("//span[contains(.,'Forward a copy of incoming mail to')]/../preceding-sibling::td/input"));
+        public Button BtnSaveChanges { get; private set; } = new Button(By.XPath
+            ("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[6]/div/table/tbody/tr[4]/td/div/button[1]"));
+        public Radio RbForwardingVariant { get; private set; } = new Radio(By.XPath
+            ("//span[contains(.,'Forward a copy of incoming mail to')]/../preceding-sibling::td/input"));
         public Button BtnProceed { get; private set; } = new Button(By.XPath("//input[@type='submit']"));
 
         public ForwardPage():base()

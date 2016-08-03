@@ -19,7 +19,6 @@ namespace TAFramework.Steps
         {
             MessagePage page = new MessagePage();
             page.LinkGoToConfirmation.Click(7);
-            //page.ClickGoToConfirmationLink(7);
             page.ClickConfirm(7);
         }
 

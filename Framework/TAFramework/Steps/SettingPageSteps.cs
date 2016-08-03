@@ -39,9 +39,9 @@ namespace TAFramework.Steps
         {
             SettingsPage page = new SettingsPage();
             page.TxtSignature.TypeText(signature, 7);
-            Thread.Sleep(1000);
+            page.WaitForPageToLoad();
             page.BtnSaveChanges.Click(7);
-            Thread.Sleep(1000);
+            page.WaitForPageToLoad();
         }
 
         public static void RemoveSignature()
@@ -59,13 +59,13 @@ namespace TAFramework.Steps
         public static void SetOutOfOfficeAutoReplyOn(string subject, string message)
         {
             SettingsPage page = new SettingsPage();
-            Thread.Sleep(3000);
+            page.WaitForPageToLoad();
             page.RbAutoReplyOn.Select(5);
             page.TxtAutoReplySubject.TypeText(subject, 5);
             page.TxtAutoReplyMessage.TypeText(message, 5);
-            Thread.Sleep(1000);
+            page.WaitForPageToLoad();
             page.BtnSaveChanges.Click(5);
-            Thread.Sleep(1000);
+            page.WaitForPageToLoad();
         }
 
         public static void SetOutOfOfficeAutoReplyOff()
@@ -73,10 +73,13 @@ namespace TAFramework.Steps
             SettingsPage page = new SettingsPage();
             page.GoToPage();
             page.WaitForPageToLoad();
+            page.WaitForPageToLoad();
             if (!page.RbAutoReplyOff.IsSelected())
             {
                 page.RbAutoReplyOff.Select(5);
+                page.WaitForPageToLoad();
                 page.BtnSaveChanges.Click(5);
+                page.WaitForPageToLoad();
             }
         }
     }

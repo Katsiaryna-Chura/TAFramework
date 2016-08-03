@@ -26,13 +26,12 @@ namespace TAFramework.Steps
             page.BtnOk.Click(7);
         }
 
-        public static void ChooseForwardingVariant()//rename
+        public static void ChooseForwardingVariant()
         {
             ForwardPage page = new ForwardPage();
             page.RbForwardingVariant.Select(7);
             page.BtnSaveChanges.Click(7);
-
-            Thread.Sleep(2000);
+            page.WaitForPageToLoad();
         }
 
         public static void DeleteAllForwardingAddresses()

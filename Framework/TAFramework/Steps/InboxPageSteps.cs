@@ -10,14 +10,21 @@ namespace TAFramework.Steps
 {
     public class InboxPageSteps
     {
-        public static void ReportMessageAsSpam(string email)
+        public static void ReportMessageAsSpam(string email, string subject)
         {
             InboxPage page = new InboxPage();
-            page.CheckMessageChecker(email, 7);
+            page.CheckMessageChecker(email, subject, 7);
             page.BtnReportSpam.Click(7);
+            page.WaitForPageToLoad();
         }
 
-        public static void GoToMessagePage(string email)// add subject as parameter ?
+        public static void GoToMessagePage(string email, string subject)
+        {
+            InboxPage page = new InboxPage();
+            page.GoToMessagePage(email, subject, 10);
+        }
+
+        public static void GoToMessagePage(string email)
         {
             InboxPage page = new InboxPage();
             page.GoToMessagePage(email, 10);
@@ -38,7 +45,6 @@ namespace TAFramework.Steps
             page.WaitForPageToLoad();
             if (page.SelectAllMessages())
             {
-                //page.WaitForPageToLoad();
                 page.BtnDelete.Click(5);
                 page.WaitForPageToLoad();
             }
@@ -48,6 +54,7 @@ namespace TAFramework.Steps
         {
             InboxPage page = new InboxPage();
             page.BtnRefresh.Click(5);
+            page.WaitForPageToLoad();
         }
 
         public static bool IsSignaturePresentInMessage(string signature)
@@ -65,7 +72,7 @@ namespace TAFramework.Steps
             page.MarkMessageAsStarred(email,subject);
         }
 
-        public static bool IsMessagePresentInStarredFolder(string email, string subject)// to another class ?
+        public static bool IsMessagePresentInStarredFolder(string email, string subject)
         {
             InboxPage page = new InboxPage();
             page.linkStarred.Click(5);

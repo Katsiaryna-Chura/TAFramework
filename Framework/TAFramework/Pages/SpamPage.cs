@@ -39,11 +39,11 @@ namespace TAFramework.Pages
             bool result = false;
             foreach (var cb in WebDriver.GetDriver().FindElements(By.XPath("//tr[td[4]/div[2]/span[@email]]/td[2]/div[@role='checkbox']")))
             {
-                //if (!cb.Selected)
-                //{
+                if (!cb.Selected)
+                {
                     cb.Click();
                     result = true;
-                //}
+                }
             }
             return result;
         }

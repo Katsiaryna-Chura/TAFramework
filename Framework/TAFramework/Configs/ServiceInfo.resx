@@ -117,17 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="City" xml:space="preserve">
-    <value>Copenhagen</value>
-  </data>
   <data name="HostName" xml:space="preserve">
     <value>ip-api.com</value>
   </data>
   <data name="HttpMethod" xml:space="preserve">
     <value>GET</value>
-  </data>
-  <data name="IP" xml:space="preserve">
-    <value>86.58.245.1</value>
   </data>
   <data name="Protocol" xml:space="preserve">
     <value>http</value>

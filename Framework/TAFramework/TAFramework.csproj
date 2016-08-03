@@ -119,7 +119,6 @@
     <Compile Include="Steps\SpamPageSteps.cs" />
     <Compile Include="Steps\ThemesPageSteps.cs" />
     <Compile Include="Steps\TrashPageSteps.cs" />
-    <Compile Include="Tests\Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\FrameworkCore.csproj">

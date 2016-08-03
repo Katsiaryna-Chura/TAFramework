@@ -13,8 +13,10 @@ namespace TAFramework.Pages
 {
     public class SettingsPage : BasePage
     {
-        public Link LinkForwardingAndPOP { get; private set; } = new Link(By.XPath("//a[contains(.,'Forwarding and POP/IMAP')]"));
-        public Link LlinkFiltersAndBlockedAddresses { get; private set; } = new Link(By.XPath("//a[contains(.,'Filters and Blocked Addresses')]"));
+        public Link LinkForwardingAndPOP { get; private set; } = new Link(By.XPath
+            ("//a[contains(.,'Forwarding and POP/IMAP')]"));
+        public Link LlinkFiltersAndBlockedAddresses { get; private set; } = new Link(By.XPath
+            ("//a[contains(.,'Filters and Blocked Addresses')]"));
         public Link LinkThemes { get; private set; } = new Link(By.XPath("//a[text()='Themes']"));
 
         //  write separateGeneralSettingsPage class ?

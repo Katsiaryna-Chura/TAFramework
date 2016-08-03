@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Framework.Core.Pages;
 using Framework.Core.Elements;
 using OpenQA.Selenium;
+using System.Threading;
 
 namespace TAFramework.Pages
 {
@@ -29,6 +30,11 @@ namespace TAFramework.Pages
         public bool IsEmailVisible()
         {
             return TxtEmail.Element.Displayed && TxtEmail.Element.Enabled;
+        }
+
+        public void WaitForPageToLoad()
+        {
+            Thread.Sleep(2000);
         }
     }
 }

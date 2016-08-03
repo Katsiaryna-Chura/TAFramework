@@ -117,10 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="attach_message" xml:space="preserve">
+    <value>text with attachment</value>
+  </data>
+  <data name="attach_subject" xml:space="preserve">
+    <value>attach</value>
+  </data>
+  <data name="big_attach_file_path" xml:space="preserve">
+    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\my_archive.7z</value>
+  </data>
   <data name="City" xml:space="preserve">
     <value>Copenhagen</value>
   </data>
+  <data name="emoticon_number_1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="emoticon_number_2" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="emoticon_subject" xml:space="preserve">
+    <value>emoticons</value>
+  </data>
+  <data name="google_forwarding_email" xml:space="preserve">
+    <value>forwarding-noreply@google.com</value>
+  </data>
   <data name="IP" xml:space="preserve">
     <value>86.58.245.1</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="message2" xml:space="preserve">
+    <value>test123</value>
+  </data>
+  <data name="normal_attach_file" xml:space="preserve">
+    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\text.txt</value>
+  </data>
+  <data name="not_image_file" xml:space="preserve">
+    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg</value>
+  </data>
+  <data name="no_attach_message" xml:space="preserve">
+    <value>text with no attachment</value>
+  </data>
+  <data name="no_attach_subject" xml:space="preserve">
+    <value>no attach</value>
+  </data>
+  <data name="PASS" xml:space="preserve">
+    <value>PASS</value>
+  </data>
+  <data name="Re" xml:space="preserve">
+    <value>Re:</value>
+  </data>
+  <data name="signature" xml:space="preserve">
+    <value>Ivana</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="subject2" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="user1_email" xml:space="preserve">
+    <value>1vana.1104.1vanova@gmail.com</value>
+  </data>
+  <data name="user1_password" xml:space="preserve">
+    <value>1van0va1</value>
+  </data>
+  <data name="user2_email" xml:space="preserve">
+    <value>petra.1212.petrova@gmail.com</value>
+  </data>
+  <data name="user2_password" xml:space="preserve">
+    <value>petr0va1212</value>
+  </data>
+  <data name="user3_email" xml:space="preserve">
+    <value>ekaterina.chura@gmail.com</value>
+  </data>
+  <data name="user3_password" xml:space="preserve">
+    <value>11495zero</value>
+  </data>
+  <data name="vacation_message" xml:space="preserve">
+    <value>Sorry. I'm on vacation now.</value>
+  </data>
+  <data name="vacation_subject" xml:space="preserve">
+    <value>vacation</value>
   </data>
 </root>

@@ -22,7 +22,6 @@ namespace TAFramework.Steps
         {
             BasePage page = new BasePage();
             page.BtnAllSettings.Click(10);
-            //page.ClickLinkToSettings();
             SettingPageSteps.OpenSettings();
         }
 
@@ -30,7 +29,6 @@ namespace TAFramework.Steps
         {
             BasePage page = new BasePage();
             page.BtnAllSettings.Click(10);
-            //page.linkToThemes.Click(5);
             SettingPageSteps.OpenThemes();
         }
 
@@ -93,6 +91,12 @@ namespace TAFramework.Steps
             TrashPageSteps.CleanTrash();
             FiltersPageSteps.DeleteAllFilters();
             ForwardPageSteps.DeleteAllForwardingAddresses();
+        }
+
+        public static void WaitForReply()
+        {
+            BasePage page = new BasePage();
+            page.WaitForReplyMessageToBeDelivered();
         }
     }
 }

@@ -61,15 +61,6 @@ namespace TAFramework.Configs {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copenhagen.
-        /// </summary>
-        internal static string City {
-            get {
-                return ResourceManager.GetString("City", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ip-api.com.
         /// </summary>
         internal static string HostName {
@@ -84,15 +75,6 @@ namespace TAFramework.Configs {
         internal static string HttpMethod {
             get {
                 return ResourceManager.GetString("HttpMethod", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 86.58.245.1.
-        /// </summary>
-        internal static string IP {
-            get {
-                return ResourceManager.GetString("IP", resourceCulture);
             }
         }
         

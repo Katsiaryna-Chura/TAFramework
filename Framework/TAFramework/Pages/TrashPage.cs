@@ -14,8 +14,9 @@ namespace TAFramework.Pages
     {
         private BaseElement message = new BaseElement();
         public Button BtnCleanTrash { get; private set; } = new Button(By.XPath("//span[text()='Empty Bin now']"));
-        public Button BtnOk { get; private set; } = new Button(By.XPath("//button[@name='ok']"));//div[@role='alertdialog']/descendant::
-        public Button BtnDeleteForever = new Button(By.XPath("//div[text()='Delete forever' and not(ancestor::div[contains(@style, 'display: none;')])]"));
+        public Button BtnOk { get; private set; } = new Button(By.XPath("//button[@name='ok']"));
+        public Button BtnDeleteForever = new Button(By.XPath
+            ("//div[text()='Delete forever' and not(ancestor::div[contains(@style, 'display: none;')])]"));
 
         public TrashPage():base()
         {
@@ -34,11 +35,11 @@ namespace TAFramework.Pages
             bool result = false;
             foreach (var cb in WebDriver.GetDriver().FindElements(By.XPath("//tr[td[4]/div[2]/span[@email]]/td[2]/div[@role='checkbox']")))
             {
-                //if (!cb.Selected)
-                //{
-                cb.Click();
-                result = true;
-                //}
+                if (!cb.Selected)
+                {
+                    cb.Click();
+                    result = true;
+                }
             }
             return result;
         }
