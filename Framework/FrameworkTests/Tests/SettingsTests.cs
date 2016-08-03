@@ -79,27 +79,27 @@ namespace FrameworkTests.Tests
         //    }
         //}
 
-        [Test]
-        public void Test12()
-        {
-            try
-            {
-                LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
-                BaseSteps.GoToSettings();
-                SettingPageSteps.SetSignature(TestsData.signature);
-                Assert.IsTrue(InboxPageSteps.IsSignaturePresentInMessage(TestsData.signature), "The signature isn't present, but it should be");
-                SettingPageSteps.RemoveSignature();
-            }
-            catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-            {
-                log.Error(ex);
-            }
-            catch (AssertionException ex)
-            {
-                log.Error(ex.Message);
-                throw;
-            }
-        }
+        //[Test]
+        //public void Test12()
+        //{
+        //    try
+        //    {
+        //        LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
+        //        BaseSteps.GoToSettings();
+        //        SettingPageSteps.SetSignature(TestsData.signature);
+        //        Assert.IsTrue(InboxPageSteps.IsSignaturePresentInMessage(TestsData.signature), "The signature isn't present, but it should be");
+        //        SettingPageSteps.RemoveSignature();
+        //    }
+        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+        //    {
+        //        log.Error(ex);
+        //    }
+        //    catch (AssertionException ex)
+        //    {
+        //        log.Error(ex.Message);
+        //        throw;
+        //    }
+        //}
 
         //[Test]
         //public void Test14()
