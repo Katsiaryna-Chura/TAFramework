@@ -66,12 +66,12 @@ namespace FrameworkTests.Tests
         {
             try
             {
-                var path = Environment.CurrentDirectory;
-                string fullpath = $@"{path}\text.jpg";
-                log.Info($"!!!!!!!!!!!!!!FILE PATH: {fullpath}!!!!!!!!!!!!!!!!!!");
+                var path = Directory.Exists(@"C:\Temp");
+                //string fullpath = $@"{path}\text.jpg";
+                log.Info($"!!!!!!!!!!!!!! is dir exists: {path}!!!!!!!!!!!!!!!!!!");
                 LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
                 BaseSteps.GoToThemes();
-                ThemesPageSteps.ChangeBackgroungImage(fullpath);//TestsData.not_image_file
+                ThemesPageSteps.ChangeBackgroungImage(TestsData.not_image_file);
                 Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured(), "Upload error hasn't occured, but it should have");
                 ThemesPageSteps.CloseThemesWindow();
                 log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
