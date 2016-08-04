@@ -90,7 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configs\ServiceInfo.Designer.cs">
+    <Compile Include="Resources\ServiceInfo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ServiceInfo.resx</DependentUpon>
@@ -133,7 +133,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Configs\ServiceInfo.resx">
+    <EmbeddedResource Include="Resources\ServiceInfo.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ServiceInfo.Designer.cs</LastGenOutput>
     </EmbeddedResource>

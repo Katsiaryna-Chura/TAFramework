@@ -124,7 +124,7 @@
     <value>attach</value>
   </data>
   <data name="big_attach_file_path" xml:space="preserve">
-    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\my_archive.7z</value>
+    <value>my_archive.7z</value>
   </data>
   <data name="City" xml:space="preserve">
     <value>Copenhagen</value>
@@ -137,6 +137,9 @@
   </data>
   <data name="emoticon_subject" xml:space="preserve">
     <value>emoticons</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>FAILED</value>
   </data>
   <data name="google_forwarding_email" xml:space="preserve">
     <value>forwarding-noreply@google.com</value>
@@ -151,10 +154,10 @@
     <value>test123</value>
   </data>
   <data name="normal_attach_file" xml:space="preserve">
-    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\text.txt</value>
+    <value>text.txt</value>
   </data>
   <data name="not_image_file" xml:space="preserve">
-    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg</value>
+    <value>text.jpg</value>
   </data>
   <data name="no_attach_message" xml:space="preserve">
     <value>text with no attachment</value>
@@ -190,18 +193,15 @@
     <value>petr0va1212</value>
   </data>
   <data name="user3_email" xml:space="preserve">
-    <value>ekaterina.chura@gmail.com</value>
+    <value>ekaterina.chura@gmail.coekaterina.chura@gmail.coekaterina.chura@gmail.com</value>
   </data>
   <data name="user3_password" xml:space="preserve">
     <value>11495zero</value>
   </data>
   <data name="vacation_message" xml:space="preserve">
-    <value>Sorry. I'm on vacation now.</value>
+    <value>Sorry. I'm on vacation</value>
   </data>
   <data name="vacation_subject" xml:space="preserve">
     <value>vacation</value>
-  </data>
-  <data name="Failed" xml:space="preserve">
-    <value>FAILED</value>
   </data>
 </root>

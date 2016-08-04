@@ -79,7 +79,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\my_archive.7z.
+        ///   Looks up a localized string similar to my_archive.7z.
         /// </summary>
         internal static string big_attach_file_path {
             get {
@@ -187,7 +187,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\text.txt.
+        ///   Looks up a localized string similar to text.txt.
         /// </summary>
         internal static string normal_attach_file {
             get {
@@ -196,7 +196,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\text.jpg.
+        ///   Looks up a localized string similar to text.jpg.
         /// </summary>
         internal static string not_image_file {
             get {
@@ -286,7 +286,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ekaterina.chura@gmail.com.
+        ///   Looks up a localized string similar to ekaterina.chura@gmail.coekaterina.chura@gmail.coekaterina.chura@gmail.com.
         /// </summary>
         internal static string user3_email {
             get {
@@ -304,7 +304,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry. I&apos;m on vacation now..
+        ///   Looks up a localized string similar to Sorry. I&apos;m on vacation.
         /// </summary>
         internal static string vacation_message {
             get {

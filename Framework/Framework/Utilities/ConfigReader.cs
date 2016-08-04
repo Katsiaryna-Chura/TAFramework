@@ -13,9 +13,5 @@ namespace Framework.Core.Utilities
         {
             return ConfigurationManager.AppSettings["browser"];
         }
-        public static string GetLogfilePath()
-        {
-            return ConfigurationManager.AppSettings["logfilePath"];
-        }
-    }
+     }
 }

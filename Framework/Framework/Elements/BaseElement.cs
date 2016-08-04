@@ -15,6 +15,7 @@ namespace Framework.Core.Elements
     {
         public By By { get; set; }
         public string Name { get; set; }
+
         protected static readonly log4net.ILog log =
            log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -63,7 +64,7 @@ namespace Framework.Core.Elements
                 WebDriver.GetDriver().FindElement(this.By, timeoutInSeconds);
                 return true;
             }
-            catch (/*NoSuchElement*/Exception)
+            catch (Exception ex)
             {
                 return false;
             }
