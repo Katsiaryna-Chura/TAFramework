@@ -66,7 +66,7 @@ namespace FrameworkTests.Tests
         {
             try
             {
-                var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var path = Environment.CurrentDirectory;
                 string fullpath = $@"{path}\text.jpg";
                 log.Info($"!!!!!!!!!!!!!!FILE PATH: {fullpath}!!!!!!!!!!!!!!!!!!");
                 LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
