@@ -68,6 +68,7 @@ namespace FrameworkTests.Tests
             {
                 var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 string fullpath = $@"{path}\text.jpg";
+                log.Info($"!!!!!!!!!!!!!!FILE PATH: {fullpath}!!!!!!!!!!!!!!!!!!");
                 LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
                 BaseSteps.GoToThemes();
                 ThemesPageSteps.ChangeBackgroungImage(fullpath);//TestsData.not_image_file
