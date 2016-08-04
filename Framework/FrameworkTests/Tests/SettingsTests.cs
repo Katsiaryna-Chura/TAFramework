@@ -61,20 +61,42 @@ namespace FrameworkTests.Tests
         //    }
         //}
 
+        //[Test]
+        //public void Test4()
+        //{
+        //    try
+        //    {
+        //        LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
+        //        BaseSteps.GoToThemes();
+        //        ThemesPageSteps.ChangeBackgroungImage(TestsData.not_image_file);
+        //        Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured(), "Upload error hasn't occured, but it should have");
+        //        ThemesPageSteps.CloseThemesWindow();
+        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
+        //    }
+        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+        //    {
+        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
+        //        log.Error(ex);
+        //    }
+        //    catch (AssertionException ex)
+        //    {
+        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
+        //        log.Error(ex.Message);
+        //        throw;
+        //    }
+        //}
+
         [Test]
-        public void Test4()
+        public void Test12()
         {
             try
             {
-                var path = Directory.Exists(@"C:\Temp");
-                //string fullpath = $@"{path}\text.jpg";
-                log.Info($"!!!!!!!!!!!!!! is dir exists: {path}!!!!!!!!!!!!!!!!!!");
                 LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
-                BaseSteps.GoToThemes();
-                ThemesPageSteps.ChangeBackgroungImage(TestsData.not_image_file);
-                Assert.IsTrue(ThemesPageSteps.IsUploadErrorOccured(), "Upload error hasn't occured, but it should have");
-                ThemesPageSteps.CloseThemesWindow();
+                BaseSteps.GoToSettings();
+                SettingPageSteps.SetSignature(TestsData.signature);
+                Assert.IsTrue(InboxPageSteps.IsSignaturePresentInMessage(TestsData.signature), "The signature isn't present, but it should be");
                 log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
+                SettingPageSteps.RemoveSignature();
             }
             catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
             {
@@ -89,60 +111,35 @@ namespace FrameworkTests.Tests
             }
         }
 
-        //[Test]
-        //public void Test12()
-        //{
-        //    try
-        //    {
-        //        LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
-        //        BaseSteps.GoToSettings();
-        //        SettingPageSteps.SetSignature(TestsData.signature);
-        //        Assert.IsTrue(InboxPageSteps.IsSignaturePresentInMessage(TestsData.signature), "The signature isn't present, but it should be");
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
-        //        SettingPageSteps.RemoveSignature();
-        //    }
-        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-        //    {
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
-        //        log.Error(ex);
-        //    }
-        //    catch (AssertionException ex)
-        //    {
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
-        //        log.Error(ex.Message);
-        //        throw;
-        //    }
-        //}
-
-        //[Test]
-        //public void Test14()
-        //{
-        //    try
-        //    {
-        //        LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
-        //        BaseSteps.GoToSettings();
-        //        SettingPageSteps.SetOutOfOfficeAutoReplyOn(TestsData.vacation_subject, TestsData.vacation_message);
-        //        LoginPageSteps.SwitchUser(TestsData.user2_email, TestsData.user2_password);
-        //        BaseSteps.SendMessage(TestsData.user1_email, TestsData.subject, TestsData.message);
-        //        BaseSteps.WaitForReply();
-        //        InboxPageSteps.Refresh();
-        //        Assert.IsTrue(InboxPageSteps.IsMessagePresentInInbox(TestsData.user1_email,
-        //            $"{TestsData.vacation_subject} {TestsData.Re} {TestsData.subject}"), "Correct reply message isn't present in inbox, but it should be");
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
-        //        LoginPageSteps.SwitchUser(TestsData.user1_email, TestsData.user1_password);
-        //        SettingPageSteps.SetOutOfOfficeAutoReplyOff();
-        //    }
-        //    catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
-        //    {
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
-        //        log.Error(ex);
-        //    }
-        //    catch (AssertionException ex)
-        //    {
-        //        log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
-        //        log.Error(ex.Message);
-        //        throw;
-        //    }
-        //}
+        [Test]
+        public void Test14()
+        {
+            try
+            {
+                LoginPageSteps.LoginUser(TestsData.user1_email, TestsData.user1_password);
+                BaseSteps.GoToSettings();
+                SettingPageSteps.SetOutOfOfficeAutoReplyOn(TestsData.vacation_subject, TestsData.vacation_message);
+                LoginPageSteps.SwitchUser(TestsData.user2_email, TestsData.user2_password);
+                BaseSteps.SendMessage(TestsData.user1_email, TestsData.subject, TestsData.message);
+                BaseSteps.WaitForReply();
+                InboxPageSteps.Refresh();
+                Assert.IsTrue(InboxPageSteps.IsMessagePresentInInbox(TestsData.user1_email,
+                    $"{TestsData.vacation_subject} {TestsData.Re} {TestsData.subject}"), "Correct reply message isn't present in inbox, but it should be");
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
+                LoginPageSteps.SwitchUser(TestsData.user1_email, TestsData.user1_password);
+                SettingPageSteps.SetOutOfOfficeAutoReplyOff();
+            }
+            catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
+            {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
+                log.Error(ex);
+            }
+            catch (AssertionException ex)
+            {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
+                log.Error(ex.Message);
+                throw;
+            }
+        }
     }
 }
