@@ -10,15 +10,16 @@ namespace Framework.Core.Elements
 {
     public class TextInput : BaseElement
     {
-        public TextInput() { }
-        public TextInput(By by): base(by) { }
-        public TextInput(IWebElement el) : base(el) { }
+        public TextInput(string name) : base(name) { }
+        public TextInput(By by, string name) : base(by, name) { }
+        public TextInput(IWebElement el, string name) : base(el, name) { }
 
         public void TypeText(string text, int timeoutInSeconds)
         {
             WaitForElementToBeVisible(timeoutInSeconds);
             Element.Clear();
             Element.SendKeys(text);
+            log.Info($"Text was entered to {this.Name}");
         }
 
         public string GetText()

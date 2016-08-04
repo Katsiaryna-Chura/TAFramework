@@ -24,13 +24,16 @@ namespace FrameworkTests.Tests
                 Assert.IsTrue(SpamPageSteps.IsMessagePresentInSpam(TestsData.user1_email, TestsData.subject), "The message isn't moved from inbox to spam, but it should be");
                 SpamPageSteps.MoveMessageToInbox(TestsData.user1_email, TestsData.subject);
                 Assert.IsTrue(InboxPageSteps.IsMessagePresentInInbox(TestsData.user1_email, TestsData.subject), "The message isn't moved from spam to inbox, but it should be");
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
             }
             catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
             {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
                 log.Error(ex);
             }
             catch (AssertionException ex)
             {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
                 log.Error(ex.Message);
                 throw;
             }
@@ -46,13 +49,16 @@ namespace FrameworkTests.Tests
                 InboxPageSteps.Refresh();
                 InboxPageSteps.MarkMessageAsStarred(TestsData.user1_email, TestsData.subject);
                 Assert.IsTrue(InboxPageSteps.IsMessagePresentInStarredFolder(TestsData.user1_email, TestsData.subject), "The message isn't marked as starred, but it should be");
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Pass}");
             }
             catch (Exception ex) when (ex is NoSuchElementException || ex is TimeoutException)
             {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
                 log.Error(ex);
             }
             catch (AssertionException ex)
             {
+                log.Info($"{TestContext.CurrentContext.Test.Name} - {TestsData.Failed}");
                 log.Error(ex.Message);
                 throw;
             }

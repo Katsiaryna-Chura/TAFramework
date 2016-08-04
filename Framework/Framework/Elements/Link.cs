@@ -10,15 +10,16 @@ namespace Framework.Core.Elements
 {
     public class Link:BaseElement
     {
-        public Link() { }
-        public Link(By by) : base(by) { }
-        public Link(IWebElement el) : base(el) { }
+        public Link(string name) : base(name) { }
+        public Link(By by, string name) : base(by, name) { }
+        public Link(IWebElement el, string name) : base(el, name) { }
 
 
         public void Click(int timeoutInSeconds)
         {
             WaitForElementToBeClickable(timeoutInSeconds);
             Element.Click();
+            log.Info($"{this.Name} was clicked");
         }
     }
 }

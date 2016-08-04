@@ -10,19 +10,22 @@ namespace Framework.Core.Elements
 {
     public class Radio : BaseElement
     {
-        public Radio() { }
-        public Radio(By by): base(by) { }
-        public Radio(IWebElement el) : base(el) { }
+        public Radio(string name) : base(name) { }
+        public Radio(By by, string name) : base(by, name) { }
+        public Radio(IWebElement el, string name) : base(el, name) { }
 
 
         public void Select(int timeoutInSeconds)
         {
             WaitForElementToBeVisible(timeoutInSeconds);
             if (!Element.Selected)
+            {
                 Element.Click();
+                log.Info($"{this.Name} was selected");
+            }
         }
 
-        public bool IsSelected()// ???
+        public bool IsSelected()
         {
             return Element.Selected;
         }

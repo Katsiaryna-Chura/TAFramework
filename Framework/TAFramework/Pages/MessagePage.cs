@@ -14,10 +14,14 @@ namespace TAFramework.Pages
 {
     public class MessagePage : BasePage
     {
-        public Button BtnReportSpam { get; private set; } = new Button(By.XPath("//div[@role='button' and @data-tooltip='Report spam']"));
-        private Button btnConfirm = new Button(By.XPath("//input[@value='Confirm']"));
-        public Link LinkGoToConfirmation { get; private set; } = new Link(By.XPath("//a[4]"));
-        public Label LblMessageBody { get; private set; } = new Label(By.XPath("//div[@class='adn ads']")); 
+        public Button BtnReportSpam { get; private set; } = new Button
+            (By.XPath("//div[@role='button' and @data-tooltip='Report spam']"),"button 'Report spam'");
+        private Button btnConfirm = new Button
+            (By.XPath("//input[@value='Confirm']"),"button 'Confirm'");
+        public Link LinkGoToConfirmation { get; private set; } = new Link
+            (By.XPath("//a[4]"),"link 'Go to confirmation page'");
+        public Label LblMessageBody { get; private set; } = new Label
+            (By.XPath("//div[@class='adn ads']"),"label 'Message body'"); 
 
         public MessagePage():base()
         {

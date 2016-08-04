@@ -124,6 +124,15 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FAILED.
+        /// </summary>
+        internal static string Failed {
+            get {
+                return ResourceManager.GetString("Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to forwarding-noreply@google.com.
         /// </summary>
         internal static string google_forwarding_email {
@@ -198,9 +207,9 @@ namespace FrameworkTests.Tests {
         /// <summary>
         ///   Looks up a localized string similar to PASS.
         /// </summary>
-        internal static string PASS {
+        internal static string Pass {
             get {
-                return ResourceManager.GetString("PASS", resourceCulture);
+                return ResourceManager.GetString("Pass", resourceCulture);
             }
         }
         

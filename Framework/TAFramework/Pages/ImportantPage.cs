@@ -10,7 +10,7 @@ namespace TAFramework.Pages
 {
     public class ImportantPage:BasePage
     {
-        private BaseElement message = new BaseElement();
+        private BaseElement message = new BaseElement("tr with the message");
 
         public ImportantPage():base()
         {

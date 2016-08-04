@@ -14,37 +14,35 @@ namespace Framework.Core.Elements
     public class BaseElement
     {
         public By By { get; set; }
+        public string Name { get; set; }
+        protected static readonly log4net.ILog log =
+           log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        public IWebElement Element {
+        public IWebElement Element
+        {
             get
             {
-                return WebDriver.GetDriver().FindElement(this.By);//with timeout
+                return WebDriver.GetDriver().FindElement(this.By);
             }
             protected set { Element = value; }
         }
 
-        public BaseElement(){ }
+        public BaseElement(string name)
+        {
+            this.Name = name;
+        }
 
-        public BaseElement(By by)
+        public BaseElement(By by, string name)
         {
             this.By = by;
+            this.Name = name;
         }
 
-        public BaseElement(IWebElement element)
+        public BaseElement(IWebElement element, string name)
         {
             this.Element = element;
+            this.Name = name;
         }
-        //protected readonly int timeout = 7;
-
-        //public bool IsDisplayed()
-        //{
-        //    return WebDriver.GetDriver().FindElement(by, timeout).Displayed;
-        //}
-
-        //public bool IsEnabled()
-        //{
-        //    return WebDriver.GetDriver().FindElement(by, timeout).Enabled;
-        //}
 
         public void WaitForElementToBeVisible(int timeoutInSeconds)
         {

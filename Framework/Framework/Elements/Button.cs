@@ -10,14 +10,15 @@ namespace Framework.Core.Elements
 {
     public class Button : BaseElement
     {
-        public Button() { }
-        public Button(By by): base(by) {}
-        public Button(IWebElement el) : base(el) { }
+        public Button(string name) : base(name) { }
+        public Button(By by, string name) : base(by, name) {}
+        public Button(IWebElement el, string name) : base(el, name) { }
 
         public void Click(int timeoutInSeconds)
         {
             WaitForElementToBeClickable(timeoutInSeconds);
             this.Element.Click();
+            log.Info($"{this.Name} was clicked");
         }
     }
 }

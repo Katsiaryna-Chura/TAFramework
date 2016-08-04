@@ -12,42 +12,57 @@ namespace TAFramework.Pages
 {
     public class BasePage:AbstractPage
     {
-        public Button BbtnCompose { get; private set; } = new Button(By.XPath("//div[@gh='cm']"));
-        public Button BtnSend { get; private set; } = new Button(By.XPath("//div[contains(@aria-label,'Send')]"));
+        public Button BbtnCompose { get; private set; } = new Button
+            (By.XPath("//div[@gh='cm']"),"button 'Compose'");
+        public Button BtnSend { get; private set; } = new Button
+            (By.XPath("//div[contains(@aria-label,'Send')]"),"button 'Send'");
 
-        public TextInput TxtTo { get; private set; } = new TextInput(By.XPath("//textarea[@name='to']"));
-        public TextInput TxtMessage { get; private set; } = new TextInput(By.XPath("//div[@role='textbox']"));
-        public TextInput TxtSubject { get; private set; } = new TextInput(By.XPath("//input[@name='subjectbox']"));
+        public TextInput TxtTo { get; private set; } = new TextInput
+            (By.XPath("//textarea[@name='to']"),"text input 'To'");
+        public TextInput TxtMessage { get; private set; } = new TextInput
+            (By.XPath("//div[@role='textbox']"), "text input 'Message'");
+        public TextInput TxtSubject { get; private set; } = new TextInput
+            (By.XPath("//input[@name='subjectbox']"), "text input 'Subject'");
 
-        public Button BtnAttachFile { get; private set; } = new Button(By.XPath("//div[@aria-label='Attach files']"));
+        public Button BtnAttachFile { get; private set; } = new Button
+            (By.XPath("//div[@aria-label='Attach files']"),"button Attach file");
 
         public BaseElement Alert { get; private set; } = new BaseElement(By.XPath
-            ("//div[@role='alertdialog']/descendant::span[text()='Large files must be shared with Google Drive']"));
-        public Button BtnCloseAlert { get; private set; } = new Button(By.XPath
-            ("//div[@role='alertdialog']/descendant::span[@aria-label='Close']"));
+            ("//div[@role='alertdialog']/descendant::span[text()='Large files must be shared with Google Drive']"),"alert dialog 'Large files'");
+        public Button BtnCloseAlert { get; private set; } = new Button
+            (By.XPath("//div[@role='alertdialog']/descendant::span[@aria-label='Close']"),"button 'Close alert'");
 
-        public Button BtnInsertEmoticon { get; private set; } = new Button(By.XPath
-            ("//div[contains(@aria-label,'Insert emoticon')]"));
-        public Button BtnShowFaceEmoticons { get; private set; } = new Button(By.XPath
-            ("//button[@title='Show face emoticons']"));
-        public Button BtnEmoticon { get; private set; } = new Button();
+        public Button BtnInsertEmoticon { get; private set; } = new Button
+            (By.XPath("//div[contains(@aria-label,'Insert emoticon')]"),"button 'Insert emoticon'");
+        public Button BtnShowFaceEmoticons { get; private set; } = new Button
+            (By.XPath("//button[@title='Show face emoticons']"),"button 'Show face emoticon'");
+        public Button BtnEmoticon { get; private set; } = new Button("concrete emoticon button");
 
-        public Label LblSignature { get; private set; } = new Label(By.XPath("//div[@class='gmail_signature']/div"));
-        public Button BtnCloseMessage { get; private set; } = new Button(By.XPath("//img[@aria-label='Save & Close']"));
+        public Label LblSignature { get; private set; } = new Label
+            (By.XPath("//div[@class='gmail_signature']/div"),"label 'Signature'");
+        public Button BtnCloseMessage { get; private set; } = new Button
+            (By.XPath("//img[@aria-label='Save & Close']"),"button 'Close message'");
 
-        public Button BtnAccount { get; private set; } = new Button(By.XPath("//span[@class='gb_3a gbii']"));
-        public Button BtnSignOut { get; private set; } = new Button(By.XPath("//a[contains(.,'Sign out')]"));
+        public Button BtnAccount { get; private set; } = new Button
+            (By.XPath("//span[@class='gb_3a gbii']"),"button 'Account'");
+        public Button BtnSignOut { get; private set; } = new Button
+            (By.XPath("//a[contains(.,'Sign out')]"),"button 'Sign out'");
 
-        public Button BtnAllSettings { get; private set; } = new Button(By.XPath("//div[@class='aos T-I-J3 J-J5-Ji']"));
-        public Link LinkToSettings { get; private set; } = new Link(By.XPath("//div[@id='ms']"));
+        public Button BtnAllSettings { get; private set; } = new Button
+            (By.XPath("//div[@class='aos T-I-J3 J-J5-Ji']"),"button 'All settings'");
+        public Link LinkToSettings { get; private set; } = new Link
+            (By.XPath("//div[@id='ms']"),"link 'Settings'");
 
-        public TextInput TxtSearchText { get; private set; } = new TextInput(By.XPath
-            ("//h2[text()='Search']/../descendant::input"));
-        public Button BtnSearch { get; private set; } = new Button(By.XPath("//button[@aria-label='Search Gmail']"));
+        public TextInput TxtSearchText { get; private set; } = new TextInput
+            (By.XPath("//h2[text()='Search']/../descendant::input"),"text input 'Search'");
+        public Button BtnSearch { get; private set; } = new Button
+            (By.XPath("//button[@aria-label='Search Gmail']"), "button 'Search Gmail'");
 
-        public Link LinkToThemes { get; private set; } = new Link(By.XPath("//div[text()='Themes']"));
+        public Link LinkToThemes { get; private set; } = new Link
+            (By.XPath("//div[text()='Themes']"),"link 'Themes'");
 
-        public Link linkStarred { get; private set; } = new Link(By.XPath("//a[@title='Starred']"));
+        public Link linkStarred { get; private set; } = new Link
+            (By.XPath("//a[@title='Starred']"),"link 'Starred'");
 
         public BasePage()
         {
@@ -72,7 +87,7 @@ namespace TAFramework.Pages
             Thread.Sleep(1000);
             System.Windows.Forms.SendKeys.SendWait("{ENTER}");
             Thread.Sleep(3000);
-            Link attachedFile = new Link();
+            Link attachedFile = new Link("link 'Attached file'");
             attachedFile.By = By.XPath($"//div[contains(text(),'{filepath.Substring(filepath.LastIndexOf('\\') + 1)}')]/ancestor::a");
             if (attachedFile.IsElementPresentOnPage(7))
             {

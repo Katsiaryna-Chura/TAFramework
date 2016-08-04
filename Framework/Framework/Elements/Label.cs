@@ -10,9 +10,9 @@ namespace Framework.Core.Elements
 {
     public class Label:BaseElement
     {
-        public Label() { }
-        public Label(By by) : base(by) { }
-        public Label(IWebElement el) : base(el) { }
+        public Label(string name) : base(name) { }
+        public Label(By by, string name) : base(by, name) { }
+        public Label(IWebElement el, string name) : base(el, name) { }
 
         public string GetText(int timeoutInSeconds)
         {

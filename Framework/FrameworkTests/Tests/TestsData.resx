@@ -162,7 +162,7 @@
   <data name="no_attach_subject" xml:space="preserve">
     <value>no attach</value>
   </data>
-  <data name="PASS" xml:space="preserve">
+  <data name="Pass" xml:space="preserve">
     <value>PASS</value>
   </data>
   <data name="Re" xml:space="preserve">
@@ -200,5 +200,8 @@
   </data>
   <data name="vacation_subject" xml:space="preserve">
     <value>vacation</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>FAILED</value>
   </data>
 </root>

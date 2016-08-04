@@ -12,15 +12,20 @@ namespace TAFramework.Pages
 {
     public class ThemesPage : BasePage
     {
-        public Link LinkSetTheme { get; private set; } = new Link(By.XPath("//a[contains(text(), 'Set Theme')]"));
-        public Button BtnMyPhotos { get; private set; } = new Button(By.XPath("//div[text()='My Photos']"));
-        public Button BtnUploadPhoto { get; private set; } = new Button(By.XPath("//div[text()='Upload a photo']"));
-        public Button BtnSelectPhotoFromComputer { get; private set; } = new Button(By.XPath
-            ("//div[text()='Select a photo from your computer']"));
-        public Label LblUploadError { get; private set; } = new Label(By.XPath
-            ("//span[contains(text(),'There was an upload error')]"));
-        public Button BbtnClose { get; private set; } = new Button(By.XPath("//div[@aria-label='Close']"));
-        public Button BtnSaveAndClose { get; private set; } = new Button(By.XPath("//span[@aria-label='Close']"));
+        public Link LinkSetTheme { get; private set; } = new Link
+            (By.XPath("//a[contains(text(), 'Set Theme')]"),"link 'Set Theme'");
+        public Button BtnMyPhotos { get; private set; } = new Button
+            (By.XPath("//div[text()='My Photos']"),"button 'My photos'");
+        public Button BtnUploadPhoto { get; private set; } = new Button
+            (By.XPath("//div[text()='Upload a photo']"),"button 'Upload a photo'");
+        public Button BtnSelectPhotoFromComputer { get; private set; } = new Button
+            (By.XPath("//div[text()='Select a photo from your computer']"),"button 'Select photo from your computer'");
+        public Label LblUploadError { get; private set; } = new Label
+            (By.XPath("//span[contains(text(),'There was an upload error')]"),"label 'Upload error'");
+        public Button BtnClose { get; private set; } = new Button
+            (By.XPath("//div[@aria-label='Close']"),"button 'Close'");
+        public Button BtnSaveAndClose { get; private set; } = new Button
+            (By.XPath("//span[@aria-label='Close']"),"button 'Save and close'");
 
         public ThemesPage() : base()
         {

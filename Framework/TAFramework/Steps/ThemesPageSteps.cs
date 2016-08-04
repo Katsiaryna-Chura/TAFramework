@@ -34,7 +34,7 @@ namespace TAFramework.Steps
         public static void CloseThemesWindow()
         {
             ThemesPage page = new ThemesPage();
-            page.BbtnClose.Click(5);
+            page.BtnClose.Click(5);
             page.ReturnFocusToThemesWindow();
             page.BtnSaveAndClose.Click(5);
         }

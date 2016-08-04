@@ -12,11 +12,14 @@ namespace TAFramework.Pages
 {
     public class TrashPage:BasePage
     {
-        private BaseElement message = new BaseElement();
-        public Button BtnCleanTrash { get; private set; } = new Button(By.XPath("//span[text()='Empty Bin now']"));
-        public Button BtnOk { get; private set; } = new Button(By.XPath("//button[@name='ok']"));
-        public Button BtnDeleteForever = new Button(By.XPath
-            ("//div[text()='Delete forever' and not(ancestor::div[contains(@style, 'display: none;')])]"));
+        private BaseElement message = new BaseElement("tr wiht the message");
+        public Button BtnCleanTrash { get; private set; } = new Button
+            (By.XPath("//span[text()='Empty Bin now']"),"button 'Clean trash'");
+        public Button BtnOk { get; private set; } = new Button
+            (By.XPath("//button[@name='ok']"),"button 'OK'");
+        public Button BtnDeleteForever = new Button
+            (By.XPath("//div[text()='Delete forever' and not(ancestor::div[contains(@style, 'display: none;')])]"),
+            "button 'Delete forever'");
 
         public TrashPage():base()
         {
@@ -35,7 +38,7 @@ namespace TAFramework.Pages
             bool result = false;
             foreach (var cb in WebDriver.GetDriver().FindElements(By.XPath("//tr[td[4]/div[2]/span[@email]]/td[2]/div[@role='checkbox']")))
             {
-                if (!cb.Selected)
+                if (cb.Displayed && !cb.Selected)
                 {
                     cb.Click();
                     result = true;

@@ -12,13 +12,15 @@ namespace TAFramework.Pages
 {
     public class LoginPage:AbstractPage
     {
-        public TextInput TxtEmail { get; private set; } = new TextInput(By.Id("Email"));
-        public TextInput TxtPassword { get; private set; } = new TextInput(By.Id("Passwd"));
-        public Button BtnNext { get; private set; } = new Button(By.Id("next"));
-        public Button BtnSignIn { get; private set; } = new Button(By.Id("signIn"));
+        public TextInput TxtEmail { get; private set; } = new TextInput(By.Id("Email"),"text input 'Email'");
+        public TextInput TxtPassword { get; private set; } = new TextInput(By.Id("Passwd"),"text input 'Password'");
+        public Button BtnNext { get; private set; } = new Button(By.Id("next"),"button 'Next'");
+        public Button BtnSignIn { get; private set; } = new Button(By.Id("signIn"),"button 'Sign in'");
 
-        public Link LinkChangeAccount { get; private set; } = new Link(By.Id("account-chooser-link"));
-        public Button BtnAddAccount { get; private set; } = new Button(By.XPath("//a[contains(.,'Add account')]"));
+        public Link LinkChangeAccount { get; private set; } = new Link
+            (By.Id("account-chooser-link"),"link 'Change account'");
+        public Button BtnAddAccount { get; private set; } = new Button
+            (By.XPath("//a[contains(.,'Add account')]"),"button 'Add account'");
 
         protected readonly int timeout = 5;
 
