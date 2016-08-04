@@ -45,7 +45,7 @@ namespace TAFramework.Pages
         public void UploadPhotoFromComputer(string imagePath)
         {
             System.Windows.Forms.SendKeys.SendWait(imagePath);
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             System.Windows.Forms.SendKeys.SendWait("{ENTER}");
             Thread.Sleep(1000);
         }

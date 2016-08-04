@@ -84,7 +84,7 @@ namespace TAFramework.Pages
         public bool AttachSpecifiedFile(string filepath)
         {
             System.Windows.Forms.SendKeys.SendWait(filepath);
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             System.Windows.Forms.SendKeys.SendWait("{ENTER}");
             Thread.Sleep(3000);
             Link attachedFile = new Link("link 'Attached file'");

@@ -286,7 +286,7 @@ namespace FrameworkTests.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ekaterina.chura@gmail.coekaterina.chura@gmail.coekaterina.chura@gmail.com.
+        ///   Looks up a localized string similar to ekaterina.chura@gmail.com.
         /// </summary>
         internal static string user3_email {
             get {
